@@ -1,0 +1,83 @@
+<div class="container mt-5">
+  <h2>Cadastrar Novo Doador</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nome"
+        name="nome"
+        [(ngModel)]="novoDoador.nome"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="idade">Idade</label>
+      <input
+        type="number"
+        class="form-control"
+        id="idade"
+        name="idade"
+        [(ngModel)]="novoDoador.idade"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="peso">Peso</label>
+      <input
+        type="number"
+        class="form-control"
+        id="peso"
+        name="peso"
+        [(ngModel)]="novoDoador.peso"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="tipoSanguineo">Tipo Sanguíneo</label>
+      <input
+        type="text"
+        class="form-control"
+        id="tipoSanguineo"
+        name="tipoSanguineo"
+        [(ngModel)]="novoDoador.tipoSanguineo"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="sexo">Sexo</label>
+      <select
+        class="form-control"
+        id="sexo"
+        name="sexo"
+        [(ngModel)]="novoDoador.sexo"
+        required
+      >
+        <option value="" disabled selected>Selecione</option>
+        <option value="M">Masculino</option>
+        <option value="F">Feminino</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="telefone">Telefone</label>
+      <input
+        type="text"
+        class="form-control"
+        id="telefone"
+        name="telefone"
+        [(ngModel)]="novoDoador.telefone"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-success">Cadastrar</button>
+  </form>
+
+
+  <h3 class="mt-5">Lista de Doadores</h3>
+  <ul class="list-group">
+    <li *ngFor="let doador of doadores" class="list-group-item">
+      {{ doador.nome }} - {{ doador.tipoSanguineo }} - {{ doador.telefone }}
+    </li>
+  </ul>
+</div>

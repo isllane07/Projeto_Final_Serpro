@@ -1,0 +1,56 @@
+<div class="container mt-5">
+  <h2 class="text-center text-danger">Registrar Doação</h2>
+
+  <div *ngIf="doador" class="doador-info mt-4">
+    <p class="fw-bold text-danger">Doações feitas:
+      <span class="text-dark">{{ doador.doacoes ? doador.doacoes.length : 0 }}</span>
+    </p>
+
+    <h4 class="text-danger">Histórico de Doações:</h4>
+    <ul class="list-group">
+      <li *ngFor="let doacao of doador.doacoes" class="list-group-item">
+        {{ doacao }}
+      </li>
+    </ul>
+  </div>
+
+  <form #form="ngForm" (ngSubmit)="registrarDoacao()" novalidate class="mt-4 form-doacao">
+    <div class="form-group mb-3">
+      <label for="alimentado" class="form-label text-danger">
+        Você se alimentou nas últimas 2 horas?
+      </label>
+      <select
+        class="form-control border-danger text-danger"
+        id="alimentado"
+        [(ngModel)]="alimentado"
+        name="alimentado"
+        required>
+        <option value="" disabled selected>Selecione uma opção</option>
+        <option value="Sim">Sim</option>
+        <option value="Não">Não</option>
+      </select>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="saiuDoPais" class="form-label text-danger">
+        Você saiu do país nos últimos 3 meses?
+      </label>
+      <select
+        class="form-control border-danger text-danger"
+        id="saiuDoPais"
+        [(ngModel)]="saiuDoPais"
+        name="saiuDoPais"
+        required>
+        <option value="" disabled selected>Selecione uma opção</option>
+        <option value="Sim">Sim</option>
+        <option value="Não">Não</option>
+      </select>
+    </div>
+
+    <button type="submit"
+      class="btn btn-danger w-100 fw-bold"
+      [disabled]="form.invalid">
+      Registrar Doação
+    </button>
+  </form>
+</div>

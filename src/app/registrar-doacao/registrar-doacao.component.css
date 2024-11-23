@@ -1,0 +1,56 @@
+/* Container principal */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+}
+
+/* Título principal */
+h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Informações do doador */
+.doador-info {
+  background-color: #fff5f5;
+  border: 1px solid #f5c6cb;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Histórico de doações */
+.list-group-item {
+  border-color: #f5c6cb;
+  color: #212529;
+}
+
+/* Formulário de doação */
+.form-doacao label {
+  font-weight: bold;
+}
+
+.form-doacao .form-control {
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Botão de envio */
+button.btn-danger {
+  font-size: 18px;
+  padding: 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button.btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* Texto vermelho */
+.text-danger {
+  color: #c82333 !important;
+}

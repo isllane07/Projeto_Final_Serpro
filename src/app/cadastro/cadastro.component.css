@@ -1,0 +1,127 @@
+
+
+@media (max-width: 576px) {
+  .form-group {
+    margin-bottom: 1rem;
+
+  .form-control {
+    width: 100%;
+  }
+}
+
+
+@media (min-width: 577px) {
+  .form-control {
+    max-width: 100%;
+  }
+
+  .form-group input,
+  .form-group select {
+    width: auto;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group label {
+    font-size: 1rem;
+  }
+}
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+h2 {
+  text-align: center;
+  color: #c62828;
+  font-size: 2rem;
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 30px;
+}
+
+
+label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #c62828;
+  display: block;
+  margin-bottom: 8px;
+}
+
+
+input[type="text"], input[type="number"], select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease;
+}
+
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus {
+  border-color: #c62828;
+  outline: none;
+}
+
+
+button[type="submit"] {
+  background-color: #c62828;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+
+button[type="submit"]:hover {
+  background-color: #b71c1c;
+  transform: scale(1.05);
+}
+
+input[required], select[required] {
+  background-color: #f8f8f8;
+}
+
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+
+.mt-5 {
+  margin-top: 50px;
+}
+
+h3 {
+  color: #c62828; /* Cor principal */
+  font-size: 24px; /* Tamanho da fonte */
+  font-weight: bold; /* Deixa o texto em negrito */
+  text-align: center; /* Centraliza o título */
+  text-transform: uppercase; /* Deixa o texto em maiúsculas */
+  letter-spacing: 2px; /* Aumenta o espaço entre as letras */
+  margin-top: 20px; /* Espaço acima do título */
+  padding: 10px 0; /* Espaço ao redor do título */
+  border-bottom: 2px solid #c62828; /* Linha abaixo do título */
+  background-color: rgba(198, 40, 40, 0.1); /* Fundo suave com a cor #c62828 */
+  border-radius: 5px; /* Bordas arredondadas */
+}
+
+h3:hover {
+  color: #fff; /* Altera a cor do texto ao passar o mouse */
+  background-color: #c62828; /* Muda o fundo ao passar o mouse */
+  cursor: pointer; /* Aponta o cursor para indicar interatividade */
+}
